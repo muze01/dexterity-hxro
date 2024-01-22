@@ -6,8 +6,8 @@ import { notify } from "utils/notifications";
 export const DefaultInfo: FC = () => {
     const { mpgPubkey, selectedProduct } = useProduct()
 
-    useEffect(() => {}, [mpgPubkey, selectedProduct])
-;
+    useEffect(() => { }, [mpgPubkey, selectedProduct])
+        ;
 
     return (
         <div className="flex flex-col justify-center items-center border border-white rounded-lg p-6 mt-6 shadow-lg">
@@ -16,7 +16,7 @@ export const DefaultInfo: FC = () => {
                 <div className="flex flex-row items-center space-x-2">
                     <span className="font-semibold text-lg">Mpg PubKey:</span>
                     <div><span className="text-base text-gray-600">{formatPubKey(mpgPubkey)}</span>
-                    <span className='ml-5 cursor-pointer' onClick={() => {handleCopy(mpgPubkey, 'Mpg Pubkey')}}>📋</span></div>
+                        <span className='ml-5 cursor-pointer' onClick={() => { handleCopy(mpgPubkey, 'Mpg Pubkey') }}>📋</span></div>
                 </div>
                 <div className="flex flex-row items-center space-x-2">
                     <span className="font-semibold text-lg">Product:</span>
@@ -29,8 +29,4 @@ export const DefaultInfo: FC = () => {
             </div>
         </div>
     );
-    
-    
-    
-    
 }

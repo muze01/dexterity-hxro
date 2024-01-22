@@ -20,10 +20,10 @@ export const SelectTraderAccounts: FC = () => {
     }, [publicKey, manifest]);
 
     const fetchTraderAccounts = useCallback(async () => {
-        if (!publicKey) {console.log('publicKey error');return};
-        if (!manifest) {console.log('manifest error');return};
-        if (!manifest.fields) {console.log('manifest.fields error');return};
-        if (!manifest.fields.wallet.publicKey) {console.log('manifest.fields.wallet.publicKey error');return};
+        if (!publicKey) { console.log('publicKey error'); return };
+        if (!manifest) { console.log('manifest error'); return };
+        if (!manifest.fields) { console.log('manifest.fields error'); return };
+        if (!manifest.fields.wallet.publicKey) { console.log('manifest.fields.wallet.publicKey error'); return };
 
         try {
 
@@ -48,18 +48,18 @@ export const SelectTraderAccounts: FC = () => {
 
     const handleSelection = useCallback(async (selectedValue: string) => {
 
-            // TRG Selection & Initiation
+        // TRG Selection & Initiation
 
     }, [manifest, setTrader]);
 
     return (
         <div className="flex flex-col items-center justify-center border border-white rounded-lg p-4 mt-4">
             <h1 className="text-2xl mb-4">Select or Create a Trader Account</h1>
-    
+
             {trgsArr.length > 0 ? (
                 <div className="w-full flex flex-col items-center space-y-4">
                     <div><TraderAccountDropdown accounts={trgsArr} onSelect={handleSelection} />
-                    <span className='ml-5 cursor-pointer' onClick={() => {handleCopy(selectedTrg, 'Trg Pubkey')}}>📋</span></div>
+                        <span className='ml-5 cursor-pointer' onClick={() => { handleCopy(selectedTrg, 'Trg Pubkey') }}>📋</span></div>
                     <Button
                         text="🔄 Load Trader Accounts"
                         onClick={fetchTraderAccounts}

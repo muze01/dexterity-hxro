@@ -22,9 +22,7 @@ export const AccountInfo: FC = () => {
 
     const updateAccountInfo = useCallback(async () => {
         if (!trader) return;
-
         // Fetch & Update Trader Account information
-
     }, [trader, selectedProduct]); // Removed markPrice and indexPrice
 
     useEffect(() => {

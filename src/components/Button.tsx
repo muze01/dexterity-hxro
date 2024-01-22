@@ -24,9 +24,9 @@ const Button: React.FC<ButtonProps> = ({ text, disabled, onClick, className, isL
     return () => clearTimeout(timer);
   }, [status]);
 
-  const displayText = tempStatus ? 
-                      (tempStatus === 'success' ? 'Success!' : 'Failed!') : 
-                      (isLoading ? 'Processing...' : text);
+  const displayText = tempStatus ?
+    (tempStatus === 'success' ? 'Success!' : 'Failed!') :
+    (isLoading ? 'Processing...' : text);
 
   return (
     <button

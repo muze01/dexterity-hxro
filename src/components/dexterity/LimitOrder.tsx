@@ -22,8 +22,8 @@ export const PlaceLimitOrder: FC = () => {
     const network = networkConfiguration as WalletAdapterNetwork;
 
     const callbacks = {
-        onGettingBlockHashFn: () => {},
-        onGotBlockHashFn: () => {},
+        onGettingBlockHashFn: () => { },
+        onGotBlockHashFn: () => { },
         onConfirm: (txn: string) => notify({ type: 'success', message: 'Order Placed Successfully!', txid: txn })
     }
 
